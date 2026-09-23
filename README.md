@@ -202,7 +202,7 @@ $ kubectl -n scylla2 get svc
 scylla-cluster-europe-west2-c-dc2-c-0
 ```
 
-This is a node `scylla-cluster-europe-west2-c-dc2-c-0` from the DC planning to be decommisioned
+This is a node `scylla-cluster-europe-west2-c-dc2-c-0` from the DC planning to be decommissioned
 
 **b)** Enable maintenance mode on each node to be decommissioned
 ```
@@ -213,13 +213,13 @@ $ kubectl -n scylla2 label svc scylla-cluster-europe-west2-c-dc2-c-0 scylla/node
 $ kubectl -n scylla2 label svc scylla-cluster-europe-west2-c-dc2-c-0 scylla/node-maintenance-
 ```
 
-**2) run the nodetool repair on each node in the data-center that is going to be decommissioned, one at a time in a rolling fashion**
+**2) run the nodetool repair on each node in the datacenter that is going to be decommissioned, one at a time in a rolling fashion**
 
 ```
 $ kubectl --context="${CONTEXT_DC2}" -n=scylla2 exec -it pod/scylla-cluster-europe-west2-c-dc2-c-0 -c=scylla -- nodetool repair
 ```
 
-**3) alter ks to disable replication on dc to be decommissioned**
+**3) alter KS to disable replication on the DC to be decommissioned**
 get into a node:
 ```
 $ kubectl -n scylla2  exec --stdin --tty scylla-cluster-europe-west2-c-dc2-c-0 -- /bin/bash
