@@ -2,7 +2,7 @@
 
 Following ScyllaDB Operators series:\
 https://github.com/IvanGDR/Install-Scylla-Operator-in-on-premise-K8s-Cluster-and-deploy-multiDC-cluster \
-It may be required to decommissioned a DC.
+At some point in time, it may be required to decommissioning a DC.
 
 
 ### Decommission steps
