@@ -1,5 +1,10 @@
 # Decommissioning-a-ScyllaDB-Data-Center-Deployed-via-Scylla-Operator-Step-by-Step-Guide
 
+Following ScyllaDB Operators series:
+https://github.com/IvanGDR/Install-Scylla-Operator-in-on-premise-K8s-Cluster-and-deploy-multiDC-cluster
+It may be required to decommissioned a DC.
+
+
 ### Decommission steps
 
 1. put all nodes in the Decommissioned DC under maintenance mode
